@@ -41,7 +41,7 @@ score = 0
 
 itr=0
 
-function at()
+function throw_bombs()
 	for i=1,5 do
 		if itr % 5 == 0 then
 			add(bombs, {
@@ -61,7 +61,7 @@ function _update()
 
 	itr+=1
 	
-	if itr % 10 == 0 then at() end
+	if itr % 10 == 0 then throw_bombs() end
 	
 	for b in all(bombs) do
 		if b.x == player.x+4  and b.y > 105 then
